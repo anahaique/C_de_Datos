@@ -1,0 +1,23 @@
+# Quarto
+/_site/
+/.quarto/
+
+# R
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+.Rproj.user/
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Archivos temporales del notebook
+*.html
+*.pdf
+!docs/
