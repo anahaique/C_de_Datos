@@ -1,7 +1,6 @@
 # 💻 Laptops — 
 
-Dataset sintético de **300 laptops** pensado como reemplazo del clásico
-[`palmerpenguins`](https://allisonhorst.github.io/palmerpenguins/). Tiene variables
+Dataset sintético de **300 laptops**. Tiene variables
 numéricas en escalas distintas + variable categórica con 4 niveles),
 mismos patrones visuales, mismos paquetes (`ggplot2`, `dplyr`).
 
