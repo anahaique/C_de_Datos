@@ -94,8 +94,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#datos-faltantes" id="toc-datos-faltantes" class="nav-link" data-scroll-target="#datos-faltantes">3. Datos faltantes</a></li>
   <li><a href="#estadísticas-descriptivas-por-tipo" id="toc-estadísticas-descriptivas-por-tipo" class="nav-link" data-scroll-target="#estadísticas-descriptivas-por-tipo">4. Estadísticas descriptivas por tipo</a></li>
   <li><a href="#visualizaciones" id="toc-visualizaciones" class="nav-link" data-scroll-target="#visualizaciones">5. Visualizaciones</a></li>
-  <li><a href="#bonus-correlaciones-entre-variables-numéricas" id="toc-bonus-correlaciones-entre-variables-numéricas" class="nav-link" data-scroll-target="#bonus-correlaciones-entre-variables-numéricas">6. Bonus: Correlaciones entre variables numéricas</a></li>
-  <li><a href="#ejercicios-sugeridos" id="toc-ejercicios-sugeridos" class="nav-link" data-scroll-target="#ejercicios-sugeridos">8. Ejercicios sugeridos</a></li>
+  <li><a href="#bonus-1-4-x-1" id="toc-bonus-1-4-x-1" class="nav-link" data-scroll-target="#bonus-1-4-x-1">6. Bonus 1: 4 x 1 🤩</a></li>
+  <li><a href="#bonus-2-correlaciones-entre-variables-numéricas" id="toc-bonus-2-correlaciones-entre-variables-numéricas" class="nav-link" data-scroll-target="#bonus-2-correlaciones-entre-variables-numéricas">7. Bonus 2: Correlaciones entre variables numéricas</a></li>
+  <li><a href="#bonus-3-las-opciones-no-paran" id="toc-bonus-3-las-opciones-no-paran" class="nav-link" data-scroll-target="#bonus-3-las-opciones-no-paran">8. Bonus 3: Las opciones no paran 🤯</a></li>
+  <li><a href="#ejercicios-sugeridos" id="toc-ejercicios-sugeridos" class="nav-link" data-scroll-target="#ejercicios-sugeridos">9. Ejercicios sugeridos</a></li>
   </ul>
 </nav>
 </div>
@@ -244,6 +246,7 @@ $ precio_usd        &lt;dbl&gt; 644, 716, 4095, 1934, 576, 792, 3771, 900, 1609,
 </section>
 <section id="visualizaciones" class="level2">
 <h2 class="anchored" data-anchor-id="visualizaciones">5. Visualizaciones</h2>
+<p><img src="7L.png" class="img-fluid"></p>
 <section id="primer-layer" class="level3">
 <h3 class="anchored" data-anchor-id="primer-layer">5.1.1 Primer Layer:</h3>
 <div class="cell">
@@ -351,8 +354,8 @@ $ precio_usd        &lt;dbl&gt; 644, 716, 4095, 1934, 576, 792, 3771, 900, 1609,
 </div>
 </div>
 </section>
-<section id="scatter-facetado-peso-vs-precio-anãlogo-al-facet_wrapspecies-de-penguins" class="level3">
-<h3 class="anchored" data-anchor-id="scatter-facetado-peso-vs-precio-anãlogo-al-facet_wrapspecies-de-penguins">5.3 Scatter facetado Peso vs Precio (anÃ¡logo al <code>facet_wrap(~species)</code> de Penguins)</h3>
+<section id="scatter-facetado-peso-vs-precio" class="level3">
+<h3 class="anchored" data-anchor-id="scatter-facetado-peso-vs-precio">5.3 Scatter facetado Peso vs Precio</h3>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(laptops, <span class="fu">aes</span>(<span class="at">x =</span> peso_kg, <span class="at">y =</span> precio_usd)) <span class="sc">+</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> tipo), <span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
@@ -369,7 +372,7 @@ $ precio_usd        &lt;dbl&gt; 644, 716, 4095, 1934, 576, 792, 3771, 900, 1609,
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="laptops_exploratorio_files/figure-html/scatter-facet-1.png" class="img-fluid figure-img" width="880"></p>
-<figcaption>Peso vs Precio facetado por tipo, con recta de regresiÃ³n</figcaption>
+<figcaption>Peso vs Precio facetado por tipo, con recta de regresión</figcaption>
 </figure>
 </div>
 </div>
@@ -443,25 +446,51 @@ $ precio_usd        &lt;dbl&gt; 644, 716, 4095, 1934, 576, 792, 3771, 900, 1609,
 </div>
 </section>
 </section>
-<section id="bonus-correlaciones-entre-variables-numéricas" class="level2">
-<h2 class="anchored" data-anchor-id="bonus-correlaciones-entre-variables-numéricas">6. Bonus: Correlaciones entre variables numéricas</h2>
+<section id="bonus-1-4-x-1" class="level2">
+<h2 class="anchored" data-anchor-id="bonus-1-4-x-1">6. Bonus 1: 4 x 1 🤩</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggcorrplot)</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>nums <span class="ot">&lt;-</span> laptops <span class="sc">|&gt;</span> </span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(tipo,marca))</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>corr <span class="ot">&lt;-</span> <span class="fu">cor</span>(nums, <span class="at">use =</span> <span class="st">"complete.obs"</span>)</span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggcorrplot</span>(</span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>  corr,</span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">hc.order =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"lower"</span>,</span>
-<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">outline.color =</span> <span class="st">"white"</span>,</span>
-<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">ggtheme =</span> ggplot2<span class="sc">::</span>theme_gray,</span>
-<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">colors =</span> <span class="fu">c</span>(<span class="st">"#e41a1c"</span>, <span class="st">"white"</span>, <span class="st">"#377eb5"</span>)</span>
-<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>)<span class="sc">+</span></span>
-<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>laptops <span class="sc">|&gt;</span> </span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> precio_usd, <span class="at">y =</span> cpu_score, </span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">size =</span> ram_gb, <span class="at">color =</span> tipo)) <span class="sc">+</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_size</span>(<span class="at">range =</span> <span class="fu">c</span>(.<span class="dv">5</span>, <span class="dv">12</span>), <span class="at">name =</span> <span class="st">"RAM (GB)"</span>) <span class="sc">+</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="at">palette =</span> <span class="st">"Set1"</span>) <span class="sc">+</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Precio vs CPU score (tamaño = RAM)"</span>,</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Precio (USD)"</span>,</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"CPU score"</span>,</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Tipo"</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="laptops_exploratorio_files/figure-html/bubble-laptops-1.png" class="img-fluid figure-img" width="880"></p>
+<figcaption>Bubble plot estilo gapminder: precio vs CPU, tamaño = RAM, color = tipo</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="bonus-2-correlaciones-entre-variables-numéricas" class="level2">
+<h2 class="anchored" data-anchor-id="bonus-2-correlaciones-entre-variables-numéricas">7. Bonus 2: Correlaciones entre variables numéricas</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggcorrplot)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>nums <span class="ot">&lt;-</span> laptops <span class="sc">|&gt;</span> </span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(tipo,marca))</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>corr <span class="ot">&lt;-</span> <span class="fu">cor</span>(nums, <span class="at">use =</span> <span class="st">"complete.obs"</span>)</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggcorrplot</span>(</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>  corr,</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">hc.order =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"lower"</span>,</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">outline.color =</span> <span class="st">"white"</span>,</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">ggtheme =</span> ggplot2<span class="sc">::</span>theme_gray,</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">colors =</span> <span class="fu">c</span>(<span class="st">"#e41a1c"</span>, <span class="st">"white"</span>, <span class="st">"#377eb5"</span>)</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>)<span class="sc">+</span></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -473,8 +502,45 @@ $ precio_usd        &lt;dbl&gt; 644, 716, 4095, 1934, 576, 792, 3771, 900, 1609,
 </div>
 <p><strong>Lectura esperada:</strong> correlación fuerte y positiva entre <code>ram_gb</code>, <code>cpu_score</code> y <code>precio_usd</code> (todas crecen juntas: mejor máquina = más cara). Peso correlaciona con pantalla y precio.</p>
 </section>
+<section id="bonus-3-las-opciones-no-paran" class="level2">
+<h2 class="anchored" data-anchor-id="bonus-3-las-opciones-no-paran">8. Bonus 3: Las opciones no paran 🤯</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>laptops <span class="sc">|&gt;</span> </span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(marca, tipo) <span class="sc">|&gt;</span> </span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">precio_medio =</span> <span class="fu">mean</span>(precio_usd), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">etiqueta =</span> <span class="fu">paste</span>(marca, tipo, <span class="at">sep =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(etiqueta, precio_medio), </span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">y =</span> precio_medio, </span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> tipo)) <span class="sc">+</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">xend =</span> <span class="fu">reorder</span>(etiqueta, precio_medio), <span class="at">yend =</span> <span class="dv">0</span>),</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>               <span class="at">linewidth =</span> <span class="dv">1</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_polar</span>() <span class="sc">+</span></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="at">palette =</span> <span class="st">"Set1"</span>) <span class="sc">+</span></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">title    =</span> <span class="st">"Precio promedio por marca y tipo"</span>,</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Circular lollipop chart"</span>,</span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="cn">NULL</span>, <span class="at">color =</span> <span class="st">"Tipo"</span></span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.y        =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.major.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x        =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">8</span>)</span>
+<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="laptops_exploratorio_files/figure-html/lollipop-circular-1.png" class="img-fluid figure-img" width="880"></p>
+<figcaption>Circular lollipop chart: precio promedio por marca y tipo</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section id="ejercicios-sugeridos" class="level2">
-<h2 class="anchored" data-anchor-id="ejercicios-sugeridos">8. Ejercicios sugeridos</h2>
+<h2 class="anchored" data-anchor-id="ejercicios-sugeridos">9. Ejercicios sugeridos</h2>
 <ol type="1">
 <li>Replica el scatter <code>peso_kg</code> vs <code>precio_usd</code> pero usando <code>shape = marca</code> ¿Qué patrón nuevo aparece?</li>
 <li>Filtra solo <code>tipo == "Ultrabook"</code> y grafica <code>precio_usd</code> vs <code>ram_gb</code>. ¿La recta es mÃ¡s empinada que la general?</li>
