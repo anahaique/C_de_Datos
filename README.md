@@ -6,7 +6,7 @@ mismos patrones visuales, mismos paquetes (`ggplot2`, `dplyr`).
 
 ## 📊 Notebook publicada
 
-👉 **https://anahaique.github.io/laptops-exploratorio/**
+👉 **https://anahaique.github.io/C_de_Datos/laptops_exploratorio.html**
 
 ## 📁 Contenido del repositorio
 
